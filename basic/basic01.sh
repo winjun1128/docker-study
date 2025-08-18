@@ -12,6 +12,10 @@ docker pull nginx
 docker images
 docker image ls
 
+# 이미지 삭제하기
+docker image rm 이미지이름or이미지ID
+docker rmi 이미지이름or이미지ID
+
 # 다운로드 받은 nginx 이미지로 컨테이너 실행
 docker run --name ngx-server -d -p 9922:80 nginx 
 

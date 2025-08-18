@@ -27,3 +27,18 @@ docker logs -f ngx1
 # -- util Xs    ~까지
 
 docker logs --since 20s ngx1
+docker logs --until 20s ngx1
+
+# 최근 60초
+docker logs --since 60s ngx1
+
+# 1분전부터 2분전까지
+# s : second 초단위
+# m : minute 분단위
+docker logs --since 120s --until 60s ngx1
+docker logs --since 5m --until 1m ngx1
+
+# 최근 로그 확인 + 실시간 팔로우 로그 추적
+docker logs --tail 6 -f ngx1
+
+# 로그 추적 출력 중 Ctrl + C 눌러서 로그 출력 중지 가능

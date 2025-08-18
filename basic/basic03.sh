@@ -35,3 +35,15 @@ docker rm -f busybox
 # nginx 컨테이너 실행
 docker run -d nginx
 
+# 컨테이너 내부 명령어 실행 (bash 커맨드 창 실행) -> 내부에 연결
+docker exec -it a98a bash
+
+#내부 확인
+ls #파일목록 조회
+cd #경로 변경
+cd /etc/nginx
+cat nginx.conf  #cat 화면에 표시(출력)
+
+#nginx 컨테이너 os 관련 정보 출력
+cat /etc/os-release
+
